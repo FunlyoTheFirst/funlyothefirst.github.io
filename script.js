@@ -207,9 +207,9 @@ const threshold = 260;
 const widthThreshold = window.outerWidth - window.innerWidth > threshold;
 const heightThreshold = window.outerHeight - window.innerHeight > threshold;
 const orientation = widthThreshold ? 'vertical' : 'horizontal';
-if (widthThreshold || heightThreshold) {window.location.href = "esr";};
+if (widthThreshold || heightThreshold) {window.location.href = "esr"; window.close()};
   start()
-}, 1000)
+}, 250)
 
 let v = Object.keys(h).join("");
 function S(e) {
