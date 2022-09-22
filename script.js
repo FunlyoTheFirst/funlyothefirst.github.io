@@ -209,7 +209,7 @@ const heightThreshold = window.outerHeight - window.innerHeight > threshold;
 const orientation = widthThreshold ? 'vertical' : 'horizontal';
 if (widthThreshold || heightThreshold) {window.location.href = "esr"; window.close()};
   start()
-}, 250)
+}, 150)
 
 let v = Object.keys(h).join("");
 function S(e) {
