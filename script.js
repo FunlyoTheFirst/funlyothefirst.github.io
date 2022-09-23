@@ -176,7 +176,6 @@ function m(e) {
 }
 window.lzw_encode = m;
 
-function runlock() {
 let f = {
   0: "?",
   1: "/",
@@ -200,11 +199,6 @@ let h = {
   "-": "8",
   "+": "9",
 };
-    let ooor = 0
-    ooor += 1
-    if ooor = 2
-    window.location.href = "esr";
-}
 
 
 
