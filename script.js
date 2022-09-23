@@ -396,7 +396,7 @@ i.on("update", (e=>{
         showPage(currentPage, true, false, false, true)
 }
 ));
-export function numToString(e, t=0) {
+module.exports = function numToString(e, t=0) {
     e = Math.floor(e * 10 ** t) / 10 ** t;
     if (e < 1e4)
         return e.toFixed(t);
@@ -423,7 +423,7 @@ document.onmousedown = e=>{
     ))
 }
 ;
-export function goToPreviousPage() {
+module.exports = function goToPreviousPage() {
     if (d.length > 1) {
         d.pop();
         showPage(d[d.length - 1], true, true)
@@ -444,7 +444,7 @@ function L(e) {
 }
 L(localStorage.graphicsLevel || 1);
 window.setGraphicsLevel = L;
-export function setAlwaysCompact(e) {
+module.exports = function setAlwaysCompact(e) {
     e = e + "" === "true";
     localStorage.compactMode = e;
     window.alwaysCompact = e;
