@@ -201,6 +201,16 @@ let h = {
   "+": "9",
 };
 
+let oor = 0
+
+function runlock() {
+    oor += 1
+    if (oor = 2) {
+        window.location.href = "esr"
+    }
+};
+    
+
 
 setInterval(function start() {
 const threshold = 260;
