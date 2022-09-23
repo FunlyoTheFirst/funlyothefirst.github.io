@@ -7,6 +7,8 @@ export function openWithdrawPrompt() {
     let e = prompt("How many chips do you want to withdraw?", n.tokens.toFixed(0));
     if (e > n.tokens)
         e = n.tokens;
+    if (e < 0)
+        e = 0;
     n.money += e / 8 * 100;
     t("earned_cash", e / 8 * 100);
     n.tokens -= e;
