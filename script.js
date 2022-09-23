@@ -177,7 +177,6 @@ function m(e) {
 window.lzw_encode = m;
 
 
-function runlock() {
 let f = {
   0: "?",
   1: "/",
@@ -201,12 +200,6 @@ let h = {
   "-": "8",
   "+": "9",
 };
-    let ooor = 0
-    ooor += 1
-    if (ooor = 2) {
-        window.location.href = "esr";
-    }
-
 
 
 setInterval(function start() {
@@ -545,8 +538,7 @@ window.addEventListener("keydown", (e=>{
         showPage("tradeup");
     if (document.activeElement.tagName === "INPUT")
         e.preventDefault()
-}
-)));
+}));
 if (!localStorage.backupid || localStorage.backupid === localStorage._cbid) {
     localStorage.backup = localStorage.localsave;
     document.cookie = localStorage.backup;
