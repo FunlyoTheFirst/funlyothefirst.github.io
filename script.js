@@ -12,6 +12,22 @@ import n from "/js/select.js?v=2.17";
 import {game as i} from "/js/game.js?v=2.17";
 import {addStat as s} from "/js/achievements.js?v=2.17";
 import {generateConvlr as c} from "/js/itemsn.js?v=2.17";
+(function($) {
+  $.fn.nodoubletapzoom = function() {
+      $(this).bind('touchstart', function preventZoom(e) {
+        var t2 = e.timeStamp
+          , t1 = $(this).data('lastTouch') || t2
+          , dt = t2 - t1
+          , fingers = e.originalEvent.touches.length;
+        $(this).data('lastTouch', t2);
+        if (!dt || dt > 500 || fingers > 1) return; // not double-tap
+
+        e.preventDefault(); // double tap - prevent the zoom
+        // also synthesize click events we just swallowed up
+        $(this).trigger('click').trigger('click');
+      });
+  };
+})(jQuery);
 if (!localStorage.flags)
     localStorage.flags = "";
 o().then((()=>{
