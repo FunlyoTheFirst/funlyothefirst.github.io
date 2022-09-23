@@ -546,7 +546,7 @@ window.addEventListener("keydown", (e=>{
     if (document.activeElement.tagName === "INPUT")
         e.preventDefault()
 }
-));
+)));
 if (!localStorage.backupid || localStorage.backupid === localStorage._cbid) {
     localStorage.backup = localStorage.localsave;
     document.cookie = localStorage.backup;
