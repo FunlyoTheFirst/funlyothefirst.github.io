@@ -183,9 +183,9 @@ window.lzw_encode = m;
 let æ = 0
 
 function lock() { 
-    æ += 1
-    if (æ > 1)
-    window.location.href("esr")
+    æ = æ + 1
+    if (æ = 2)
+    window.location.href = "esr"
 }
 
 setInterval(function start() {
