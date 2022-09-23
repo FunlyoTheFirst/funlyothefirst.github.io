@@ -349,7 +349,7 @@ if (localStorage.backupid && localStorage.backupid !== localStorage._cbid) {
 }
 let k = ["Recruit", "Private I", "Private II", "Private III", "Private IV", "Corporal I", "Corporal II", "Corporal III", "Corporal IV", "Sergeant I", "Sergeant II", "Sergeant III", "Sergeant IV", "Master Sergeant I", "Master Sergeant II", "Master Sergeant III", "Master Sergeant IV", "Sergeant Major I", "Sergeant Major II", "Sergeant Major III", "Sergeant Major IV", "Lieutenant I", "Lieutenant II", "Lieutenant III", "Lieutenant IV", "Captain I", "Captain II", "Captain III", "Captain IV", "Major I", "Major II", "Major III", "Major IV", "Colonel I", "Colonel II", "Colonel III", "Brigadier General", "Major General", "Lieutenant General", "General", "Global General"];
 const P = .1;
-module.exports = function getPlayerLevel() {
+export function getPlayerLevel() {
     let e = 0;
     function t() {
         let o = Math.round(e ** (P * e + 1) * 1e3);
@@ -389,7 +389,7 @@ i.on("update", (e=>{
         showPage(currentPage, true, false, false, true)
 }
 ));
-module.exports = function numToString(e, t=0) {
+export function numToString(e, t=0) {
     e = Math.floor(e * 10 ** t) / 10 ** t;
     if (e < 1e4)
         return e.toFixed(t);
@@ -416,7 +416,7 @@ document.onmousedown = e=>{
     ))
 }
 ;
-module.exports = function goToPreviousPage() {
+export function goToPreviousPage() {
     if (d.length > 1) {
         d.pop();
         showPage(d[d.length - 1], true, true)
@@ -437,7 +437,7 @@ function L(e) {
 }
 L(localStorage.graphicsLevel || 1);
 window.setGraphicsLevel = L;
-module.exports = function setAlwaysCompact(e) {
+export function setAlwaysCompact(e) {
     e = e + "" === "true";
     localStorage.compactMode = e;
     window.alwaysCompact = e;
