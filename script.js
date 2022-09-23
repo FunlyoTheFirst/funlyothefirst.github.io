@@ -356,7 +356,7 @@ if (localStorage.backupid && localStorage.backupid !== localStorage._cbid) {
 }
 let k = ["Recruit", "Private I", "Private II", "Private III", "Private IV", "Corporal I", "Corporal II", "Corporal III", "Corporal IV", "Sergeant I", "Sergeant II", "Sergeant III", "Sergeant IV", "Master Sergeant I", "Master Sergeant II", "Master Sergeant III", "Master Sergeant IV", "Sergeant Major I", "Sergeant Major II", "Sergeant Major III", "Sergeant Major IV", "Lieutenant I", "Lieutenant II", "Lieutenant III", "Lieutenant IV", "Captain I", "Captain II", "Captain III", "Captain IV", "Major I", "Major II", "Major III", "Major IV", "Colonel I", "Colonel II", "Colonel III", "Brigadier General", "Major General", "Lieutenant General", "General", "Global General"];
 const P = .1;
-export function getPlayerLevel() {
+module.exports = function getPlayerLevel() {
     let e = 0;
     function t() {
         let o = Math.round(e ** (P * e + 1) * 1e3);
