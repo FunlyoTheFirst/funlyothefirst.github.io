@@ -181,7 +181,7 @@ window.lzw_encode = m;
 
 var startTime = performance.now();
 var stopTime = performance.now();
-if ((stopTime - startTime) > 1000) {
+if ((stopTime - startTime) > 500) {
     alert("Debugger detected!")
 }
 
