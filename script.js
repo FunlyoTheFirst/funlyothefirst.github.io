@@ -202,30 +202,9 @@ let h = {
   "-": "8",
   "+": "9",
 };
-function runlock() {
-    let ooor = 0
-    ooor += 1
-    if (ooor = 2) {
-        window.location.href = "esr";
-    }
-}
-let IsUserAdmin = false;
-if (!localStorage.IsHost) {
-    localStorage.IsHost = "nothost";
-}
-if (localStorage.IsHost = "32230432") {
-    IsUserAdmin = true
-}
-setInterval(function start() {
-const threshold = 260;
-const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-const orientation = widthThreshold ? 'vertical' : 'horizontal';
-if (widthThreshold || heightThreshold) {
-    if (IsUserAdmin = false) {window.location.href = "esr"; window.close()};
-    else {}
-  start()
-}, 500)
+
+
+
 
 var startTime = performance.now();
 var stopTime = performance.now();
